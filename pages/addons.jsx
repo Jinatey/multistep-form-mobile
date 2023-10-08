@@ -1,13 +1,24 @@
 import { state } from "@/state";
 import React from "react";
 import { useSnapshot } from "valtio";
-const addonData = [
-  { title: "Online service", feature: "Acces to multiplayer game", price: 10 },
-  { title: "Large storage", feature: "Extra 1TB of cloud save", price: 20 },
+export const addonData = [
+  {
+    title: "Online service",
+    feature: "Acces to multiplayer game",
+    price: 10,
+    priceY: 100,
+  },
+  {
+    title: "Large storage",
+    feature: "Extra 1TB of cloud save",
+    price: 20,
+    priceY: 200,
+  },
   {
     title: "Customizable profile",
     feature: "Custom theme on your profile",
     price: 20,
+    priceY: 200,
   },
 ];
 

@@ -4,7 +4,7 @@ import { Switch } from "@headlessui/react";
 
 import { state } from "@/state";
 export const planData = [
-  { name: "Arcade", price: 2, pricey: 20, img: "/icon-arcade.svg" },
+  { name: "Arcade", price: 2, priceY: 20, img: "/icon-arcade.svg" },
   { name: "Advanced", price: 5, priceY: 50, img: "/icon-advanced.svg" },
   { name: "Pro", price: 6, priceY: 60, img: "/icon-pro.svg" },
 ];
