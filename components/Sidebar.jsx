@@ -1,5 +1,6 @@
 import React from "react";
- import { useRouter } from "next/router";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const sideData = [
   { path: "/" },
@@ -11,19 +12,21 @@ const sideData = [
 const Sidebar = () => {
   const router = useRouter();
   return (
-    <div className="">
-    <div className=" cursor-pointer bgImag mx-auto  flex gap-10 justify-center  ">
-      {sideData.map((side, idx) => (
-        <div 
-        onClick={()=>{
-          router.push(side.path)
-        }}
-        className=" mb-6 mt-10 flex items-center border rounded-full p-4  h-10">
-          {idx + 1}
-        </div>
-      ))}
-
-    </div>
+    <div className=" backImg h-[200px]  w-[600px] mx-auto">
+      <div className=" cursor-pointer bgImag    flex gap-10 justify-center  ">
+        {sideData.map((side, idx) => (
+          <div
+            onClick={() => {
+              router.push(side.path);
+            }}
+            className={` text-white mb-6 mt-10 flex items-center border rounded-full p-4  h-10${
+              side.path === router.pathname ? " text-blue-900 font-bold bg-blue-100 " : ""
+            }`}
+          >
+            {idx + 1}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

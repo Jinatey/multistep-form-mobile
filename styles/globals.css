@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.body{
+  background-color: #000;
+}
 .backImg{
   background: url('/bg-mobile.svg') no-repeat center center/cover  ;
-max-width: 600px;
-max-height: 300px;
-min-height: 300px;
-}
+/* max-width: 600px;
+/* max-height: 300px; */
+/* min-height: 300px; */
+} 
